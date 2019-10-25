@@ -1,0 +1,14 @@
+@import "node_modules/bulmaswatch/solar/bulmaswatch";
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.75;
+}
+
+.add-new{
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    color: antiquewhite;
+    padding-bottom: 10px;
+}
