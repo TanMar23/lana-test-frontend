@@ -24,31 +24,35 @@ export default class App extends Component {
         
         return (
             <div className='main-container'>
-                <div className='container box'>
-                    <h2 className='add-new'>ADD A NEW LIST:</h2>
-                    <div className='field'>
-                        <div className='control'>
-                            <input className="input is-primary" type="text" placeholder='Name'/>
+           
+                    <div className='columns is-centered'>
+                        <div className='box column is-6'>
+                            <h2 className='add-new'>ADD A NEW LIST:</h2>
+                            <div className='field'>
+                                <div className='control'>
+                                    <input className="input is-primary" type="text" placeholder='Name'/>
+                                </div>
+                            </div>
+                            <div className="field">
+                                <div className="control">
+                                    <textarea className="textarea is-primary" placeholder="Description"></textarea>
+                                </div>
+                            </div>
+                            <div className='buttons'>
+                                <button className='button is-primary'>Create new</button>
+                            </div>
                         </div>
                     </div>
-                    <div className="field">
-                        <div className="control">
-                            <textarea className="textarea is-primary" placeholder="Description"></textarea>
-                        </div>
-                    </div>
-                    <div className=''>
-                        <button>Create new</button>
-                    </div>
-                </div>
-                <button>Delete To Do List</button>
+            <div>      
                 {
                     todos ? 
                     todos.map((todo) => (
-                        <ToDo key={todo._id} todo={todo} />
+                            <ToDo key={todo._id} todo={todo} />
                     ))
                     :
                     <p>Loading...</p>
                 }
+            </div>
             </div>
         )
     }

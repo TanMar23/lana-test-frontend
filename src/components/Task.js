@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+// import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 
 export default class Task extends Component {
     state = {
@@ -11,8 +12,17 @@ export default class Task extends Component {
 
         return (
             <div>
-                <p className={completed && 'completed'}>{name}</p>
-                <button className='is-primary'>Delete</button>
+                <div className='columns'>
+                    <div className='column'>
+                        <p className={completed && 'completed'}>{name}</p>
+                    </div>
+                    <div className='column'>
+                        <button className='button'>Delete</button>
+                    </div>
+                </div>
+                {/* <span>
+                    <i className="far fa-trash-alt"></i>
+                </span> */}
             </div>
         )
     }
