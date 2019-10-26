@@ -1,20 +1,32 @@
-@import "node_modules/bulmaswatch/solar/bulmaswatch";
+@import 'node_modules/bulmaswatch/solar/bulmaswatch';
 
 .completed {
-    text-decoration: line-through;
-    opacity: 0.75;
+  text-decoration: line-through;
+  opacity: 0.75;
 }
 
-.add-new{
-    text-align: center;
-    font-weight: bold;
-    font-size: 25px;
-    color: antiquewhite;
-    padding-bottom: 10px;
+.title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  color: antiquewhite;
+  padding: 15px;
 }
 
-.buttons{
-    display: flex;
-    justify-content: center;
-    padding-bottom: 10px;
+.add-new {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  color: antiquewhite;
+  padding-bottom: 10px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+.icon-button {
+  border: none;
 }
