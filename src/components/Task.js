@@ -9,7 +9,7 @@ export default class Task extends Component {
   }
 
   deleteTask = async () => {
-    await Axios.delete(`http://localhost:3000/api/todo/${this.props.toDoId}/task/${this.props.task._id}`)
+    await Axios.delete(`https://immense-lake-13985.herokuapp.com/api/todo/${this.props.toDoId}/task/${this.props.task._id}`)
     Swal.fire({
       position: 'top-end',
       type: 'success',
@@ -22,7 +22,7 @@ export default class Task extends Component {
   }
 
   checkTask = async () => {
-    await Axios.put(`http://localhost:3000/api/todo/${this.props.toDoId}/task/${this.props.task._id}`)
+    await Axios.put(`https://immense-lake-13985.herokuapp.com/api/todo/${this.props.toDoId}/task/${this.props.task._id}`)
     Swal.fire({
       position: 'top-end',
       type: 'success',

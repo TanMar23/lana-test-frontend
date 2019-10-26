@@ -12,7 +12,7 @@ export default class ToDo extends Component {
   }
 
   getData = async () => {
-    const { data } = await Axios.get(`http://localhost:3000/api/todo/${this.props.todo._id}/task`)
+    const { data } = await Axios.get(`https://immense-lake-13985.herokuapp.com/api/todo/${this.props.todo._id}/task`)
     this.setState({
       tasks: data.task
     })
@@ -29,7 +29,7 @@ export default class ToDo extends Component {
 
   handleSubmit = async e => {
     e.preventDefault()
-    await Axios.post(`http://localhost:3000/api/todo/${this.props.todo._id}/task`, this.state.newTask)
+    await Axios.post(`https://immense-lake-13985.herokuapp.com/api/todo/${this.props.todo._id}/task`, this.state.newTask)
     Swal.fire({
       position: 'top-end',
       type: 'success',
@@ -47,7 +47,7 @@ export default class ToDo extends Component {
   }
 
   deleteToDo = async () => {
-    await Axios.delete(`http://localhost:3000/api/todo/${this.props.todo._id}`)
+    await Axios.delete(`https://immense-lake-13985.herokuapp.com/api/todo/${this.props.todo._id}`)
     Swal.fire({
       position: 'top-end',
       type: 'success',

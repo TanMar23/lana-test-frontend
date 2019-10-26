@@ -13,7 +13,7 @@ export default class App extends Component {
   }
 
   getData = async () => {
-    const { data } = await Axios.get(`http://localhost:3000/api/todo`)
+    const { data } = await Axios.get(`https://immense-lake-13985.herokuapp.com/api/todo`)
     this.setState({
       todos: data.todoList
     })
@@ -30,7 +30,7 @@ export default class App extends Component {
 
   handleSubmit = async e => {
     e.preventDefault()
-    await Axios.post(`http://localhost:3000/api/todo`, this.state.newToDo)
+    await Axios.post(`https://immense-lake-13985.herokuapp.com/api/todo`, this.state.newToDo)
     Swal.fire({
       position: 'top-end',
       type: 'success',
